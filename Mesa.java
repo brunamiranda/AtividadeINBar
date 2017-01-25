@@ -10,5 +10,25 @@ package nerdspot;
  * @author Bruna
  */
 public class Mesa {
+
+    
+    private int QntPessoas;
+    private int NumMesa;
+    static int QtdComida;
+    static int QtdBebida;
+    
+    public Mesa(int qp, int nm, int com, int beb){
+        QntPessoas = qp;
+        NumMesa = nm;
+        QtdComida = com;
+        QtdBebida = beb;
+    }
+    static int getQtdComida() {
+        return QtdComida;
+    }
+    static int getQtdBebida() {
+        return QtdBebida;
+    }
+
     
 }
