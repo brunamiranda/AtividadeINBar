@@ -10,20 +10,19 @@ package nerdspot;
  * @author Bruna
  */
 public class Bar {
-    public int PrecoComida;
-    public int PrecoBebida;
-    public int TempoPreparo;
+    static int PrecoComida;
+    static int PrecoBebida;
+    static int TempoPreparo;
+    static String Pagamento;
     int QntComida = Mesa.getQtdComida();
     int QntBebida = Mesa.getQtdBebida();
-    public Bar(int pc, int pb, int tp){
-        PrecoComida = QntComida *pc;
-        PrecoBebida = QntBebida * pb;
-        TempoPreparo = QntComida*tp;
-    }
-
     
-
-   
-
-        
+    public void Bar(int pc, int pb, int tp, String pgt){
+        PrecoComida = QntComida *20;
+        PrecoBebida = QntBebida * 10;
+        TempoPreparo = QntComida*15;
+        Pagamento = pgt;
+    }
+    static int Total = PrecoComida+PrecoBebida;
 }
+

@@ -5,21 +5,20 @@
  */
 package nerdspot;
 
-/**
- *
- * @author Bruna
- */
+import java.util.Random;
+
 public class Mesa {
 
     
-    private int QntPessoas;
-    private int NumMesa;
+    static int QtdPessoas;
+    static int NumMesa;
     static int QtdComida;
     static int QtdBebida;
     
-    public Mesa(int qp, int nm, int com, int beb){
-        QntPessoas = qp;
-        NumMesa = nm;
+    public void Mesa(int qp, int nm, int com, int beb){
+        Random random = new Random();
+        QtdPessoas = qp;
+        NumMesa = random.nextInt(30);
         QtdComida = com;
         QtdBebida = beb;
     }
@@ -29,6 +28,10 @@ public class Mesa {
     static int getQtdBebida() {
         return QtdBebida;
     }
+    public String toString(){
+        return " "+NumMesa+" "+QtdPessoas+" "; 
+    }
+    
 
     
 }
